@@ -62,8 +62,18 @@ presidentes.sort(); //Ordena alfabéticamente
 presidentes.push('López Obrador');
 presidentes.push('Lula');
 
+//Añadir un elemento al principio
+presidentes.unshift('Morales');
+
 //Eliminar el último elemento
 presidentes.pop();
+
+//Eliminar el primer elemento
+presidentes.shift();
+
+//Eliminar un elemento en posición específica
+//Elimina el elemento dejando hueco
+//delete presidentes[1]; //Elimina el elemento en la posición 1, pero deja un "hueco" undefined
 
 //Añadir un elemento en posición específica
 presidentes.splice(2, 0, 'Biden'); //En la posición 2, eliminar 0 elementos y añadir 'Biden'
@@ -74,5 +84,50 @@ presidentes.splice(1, 1); //En la posición 1, eliminar 1 elemento y añadir 'Ma
 //Añadir varios elementos en posición específica
 presidentes.splice(3, 0, 'Macri', 'Piñera'); //En la posición 3, eliminar 0 elementos y añadir 'Macri' y 'Piñera'
 
+presidentes.splice(2, 2, 'Echenique'); //En la posición 2, eliminar 2 elementos
+
+let listaSeparada = presidentes.join('* '); //Une todos los elementos en un string separados por ', '
+
 //Mostrar todos los presidentes en etiquetas
-document.getElementById('lista').innerText = presidentes;
+document.getElementById('lista').innerText = listaSeparada;
+
+
+
+//Ejercicio: Crear un array con nombres de equipos de fútbol
+const equipos = ['Oviedo', 'Aviles', 'Celta de Vigo', 'Mallorca', 'Caudal', 'Mosconia'];
+
+//Acceder elemento vista
+const listaFutbol = document.getElementById('listaFutbol');
+
+//Crear elementos li por cada equipo
+const li = document.createElement('li');
+li.innerText = equipos[0];
+
+//Añadir elemento a la vista
+//listaFutbol.appendChild(li);
+
+
+for(let equipo of equipos){
+    const li = document.createElement('li');
+    li.innerText = equipo;
+    listaFutbol.appendChild(li);
+}
+
+const ciudades = [['Oviedo', 'Aviles', 'Cangas de Narcea'], ['Mieres', 'Pola de Siero', 'Lastres'], ['Gijón', 'Langreo', 'Llanes']];
+
+//Acceder a "Gijon"
+console.log(ciudades[2][0]);
+
+//Recorrer array multidimensional
+for(let ciudadFila of ciudades){
+    console.log('Nueva fila:' + ciudadFila);
+    for(let ciudadColumna of ciudadFila){
+        console.log(ciudadColumna);
+    }
+}
+
+for(let i=0; i<ciudades.length; i++){
+    for(let j=0; j<ciudades[i].length; j++){
+        console.log(ciudades[i][j]);
+    }
+}
