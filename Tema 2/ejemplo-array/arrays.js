@@ -131,3 +131,24 @@ for(let i=0; i<ciudades.length; i++){
         console.log(ciudades[i][j]);
     }
 }
+
+//Preguntar dato al usuario
+//let msg = prompt('Hola, ¿cómo te llamas?');
+console.log('El usuario se llama ' + msg);
+
+//Ejercicio: Añadir un equipo al array y actualizar la vista
+function agregarEquipo(){
+    let nuevoEquipo = prompt('Introduce el nombre del equipo:');
+    
+    if(nuevoEquipo!==null && nuevoEquipo.length > 0){
+        equipos.push(nuevoEquipo);
+
+        //Actualizar la vista
+        const li = document.createElement('li');
+        li.innerText = nuevoEquipo;
+        listaFutbol.appendChild(li);
+    }
+    else {
+        alert('El nombre del equipo no puede estar vacío.');
+    }
+}
