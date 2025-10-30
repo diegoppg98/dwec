@@ -128,14 +128,8 @@ function agregarTareaVoz() {
 
     
 
-
-
-
-
-
     //Se ejecuta si hay un error
     reconocimiento.onerror = (event) => {
-      console.log(event.results[0][0].transcript);
         console.error("❌ Error en el reconocimiento:", event.error);
     };
 
