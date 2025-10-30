@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Cutre</title>
 
-    <style>
-    
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Cutre</title>
+
+  <style>
     body {
       background: linear-gradient(135deg, #12001f, #2b004f);
       font-family: 'Poppins', sans-serif;
@@ -88,14 +88,14 @@
       background: linear-gradient(145deg, #ff477e, #ff85a1);
       box-shadow: 0 0 15px rgba(255, 71, 126, 0.7);
     }
- 
   </style>
 </head>
+
 <body>
-    <div class="calculator">
+  <div class="calculator">
 
     <div id="display">0</div>
-    <button>C</button>
+    <button onclick="clearDisplay()">C</button>
     <button>(</button>
     <button>)</button>
     <button>/</button>
@@ -113,8 +113,9 @@
     <button>+</button>
     <button>0</button>
     <button>.</button>
-    <button>=</button>
-</div>
-    <script src="calculadora.js"></script>
+    <button id="botonIgual">=</button>
+  </div>
+  <script src="calculadora.js"></script>
 </body>
+
 </html>
