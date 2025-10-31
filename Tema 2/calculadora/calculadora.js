@@ -5,15 +5,26 @@ let operacion ='';
 let botonIgual = document.getElementById('botonIgual');
 botonIgual.addEventListener('click', calcularResultado);
 
+//Cuando se usa una funcion con parametros en un event listener,
+//  se debe usar una funcion anonima
+//botonIgual.addEventListener('click',()=> agregarCifra(b.innerText));
+
+
+
+
+
+
 
 //Recorrer todos los botones y asignar eventos
 let botones = document.querySelectorAll('button');
 
 botones.forEach((b) => {
-    console.log(b.innerText);
-
-    b.addEventListener('click',() =>  agregarCifra(b.innerText));
+    if(b.innerText !== 'C' && b.innerText !== '='){
+        b.addEventListener('click',() =>  agregarCifra(b.innerText));
+    }
 });
+
+
 
 
 
