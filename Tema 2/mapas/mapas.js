@@ -89,6 +89,21 @@ function anadirElementoVista(clave, valor){
     document.getElementById('listaAnimales').appendChild(li);
 }
 
+function eliminarElementoVista(clave){
+    let lista = document.getElementById('listaAnimales');
+    for(let i=0; i<lista.children.length; i++){
+
+        let claveEncontrada = lista.children[i].textContent.split(":")[0]
+        console.log(claveEncontrada);
+
+        if(claveEncontrada == clave){
+            lista.removeChild(lista.children[i]);
+        }
+
+
+    }
+}
+
 function mostrarAlerta(msg){
     alert(msg);
 }
@@ -122,3 +137,46 @@ function anadirAnimal(){
 function eliminarAnimal(){
     
 }
+
+
+//Trabajo con cadenas
+let cadena = "1;2;5;6;9;10";
+
+//Split
+let cadenaSeparada = cadena.split(";");
+
+for(let i=0; i<cadenaSeparada.length; i++){
+    console.log(cadenaSeparada[i]);
+}
+
+//Join
+let cadenaUnida = cadenaSeparada.join("-"); //1-2-5-6-9-10
+console.log(cadenaUnida);
+
+
+//Replace
+let cad = "El perro de Andrea ladra";
+cad =cad.replace("a", "e"); //Reemplazar primera ocurrencia
+//console.log(cad);
+
+cad = cad.replaceAll("a", "e");
+console.log(cad);
+
+cad.substring(0, 10); //Devuelve parte de la cadena desde 0 hasta 10
+
+let cadenaConEspacios = " 1 2 3 4 5 6 7 8 9 10  ";
+
+console.log(cadenaConEspacios.trim());
+console.log(cadenaConEspacios.replaceAll(" ", ""));
+
+
+cadena.length //tamaño de la cadena
+
+for(let i=0;i<cadena.length; i++){
+    console.log(cadena[i]);
+}
+
+cadena.toUpperCase();//Mayusculas
+cadena.toLocaleLowerCase();//Minusculas
+
+
