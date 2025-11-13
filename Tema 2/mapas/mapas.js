@@ -135,6 +135,7 @@ function anadirAnimal(){
 }
 
 function eliminarAnimal(){
+    eliminarElementoVista(claveAnimalEliminar.value);
     
 }
 
