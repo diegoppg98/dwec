@@ -93,4 +93,55 @@ function limpiarLista(){
     for(let i=0; i<tam; i++){
         lista.removeChild(lista.children[0]);
     }
+
+    //document.getElementById("lista").innerHTML="";
+
+}
+
+
+function agregarElemento(){
+    let valor = document.getElementById("valor").value;
+    let posicion = document.getElementById("posicion").value;
+
+    array.splice(posicion, 0, valor);
+    limpiarLista();
+    crearLista(array);
+}
+
+function eliminarElemento(){
+    let valor = document.getElementById("valor").value;
+    let posicion = document.getElementById("posicion").value;
+
+    array.splice(posicion, valor);
+    limpiarLista();
+    crearLista(array);
+}
+
+let imagen = document.getElementById("imagenElmo");
+let cad1 = document.getElementById("cadena1");
+let cad2 = document.getElementById("cadena2");
+
+//cad1.addEventListener("change", revertirCadena);
+
+cad1.addEventListener("input", addLetra);
+
+function addLetra(){
+    cad2.value+="a";
+}
+
+
+function revertirCadena(){
+    let cad = "";
+    
+    for(i=cad1.value.length-1; i>=0; i--){
+        cad += cad1.value.charAt(i);
+    }
+
+    cad2.value = cad;
+}
+
+//imagen.addEventListener("mouseenter", alertaEvento);
+
+function alertaEvento(){
+    alert("Se ha producido un evento");
 }
