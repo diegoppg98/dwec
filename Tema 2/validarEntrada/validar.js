@@ -1,9 +1,10 @@
 function comprobarValidez() {
     let passwordInput = document.getElementById("password");
 
-    let expresion = "^[A-Za-z0-9$*+]{8,15}$";
+    let expresionPass = "^[A-Za-z0-9$*+]{8,15}$";
+    let expresionUrl="";
 
-    let varRegex = new RegExp(expresion);
+    let varRegex = new RegExp(expresionPass);
     
     if(varRegex.test(passwordInput.value)){
         //alert("Contraseña válida");
